@@ -24,6 +24,23 @@
   </script>
     <!--PWA End-->
     
+    <style>
+    /* Tip jar buttons styling */
+    .tip-jar {
+        padding: 10px 20px; /* Padding for comfort */
+        border-radius: 8px; /* Rounded corners */
+        background-color: #ffd700; /* Gold color for buttons */
+        color: #333; /* Dark text color */
+        border: 2px solid black ; /* No border */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    }
+    
+    .tip-jar:hover {
+        background-color: #ffcc00; /* Darker on hover */
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+    </style>
+    
     <!--DNS Prefetch-->
     <link rel="dns-prefetch" href="https://localhost/index.html"/>
     
@@ -45,7 +62,29 @@
   <exec src="./device-config.py"></exec>
  <script src="./device-config.py"></script>
 </head>
-<body>
-    <h1 align="center"><strong>...Portal Activated...</strong></h1>
+
+<body style="background-color: lightgreen; color: #333333; border: 2px solid black; padding: 10px;">
+    <h1 align="center" style="border: 2px solid black; padding: 10px;"><strong>...Portal Activated...</strong></h1>
+    
+    <p align="left" style="border: 2px solid black; padding: 10px;">Keep this window open for ultimate online privacy and anonymity! No further action necessary.</p>
+    
+    <!--Tip Jar Begin-->
+    <h3 align="center" style="border: 2px solid black; padding: 10px;">Tip Jar</h3>
+    <div align="center" style="border: 2px solid black; padding: 10px;">
+            <button class="tip-jar" onclick="window.open('https://paylinkz.app/juliusthejules', '_blank')">
+                <strong>Donate</strong>
+            </button>
+    </div>
+    <br>
+    <div align="center" style="border: 2px solid black; padding: 10px;">
+<p>Thank you for your generous tip! Your support means the world to us.</p>
+    </div>
+    <!--Tip Jar End-->
+    <p align="center" style="border: 2px solid black; padding: 10px;"><strong>Portalocalhost. Copyright &copy; 2024, Joseph D. Smith.</strong></p>
+ 
+    <h2 align="center" style="border: 2px solid black; padding: 10px;">Important Disclaimer</h2>
+    
+    <p align="left" style="border: 2px solid black; padding: 10px;"><strong>Disclaimer:</strong> By using Portalocalhost, you agree to hold Joseph D. Smith and all affiliates harmless from any and all claims, damages, or liability arising from the use of this software, including but not limited to any loss of data, financial loss, or personal injury.</p>
+    
 </body>
 </html>
