@@ -15,61 +15,58 @@
     <!--SEO End-->
     
     <!--PWA Begin-->
-            <meta name="application-name" content="Portalocalhost"/>
-<meta name="theme-color" content="#35f64e"/>
-           <link rel="manifest" href="/portalocalhost/app.webmanifest"/>
+    <meta name="application-name" content="Portalocalhost"/>
+    <meta name="theme-color" content="#35f64e"/>
+    <link rel="manifest" href="/portalocalhost/app.webmanifest"/>
     <link rel="icon" href="/portalocalhost/icon-192x192.png" type="image/png" sizes="192x192"/>
     <link rel="icon" href="/portalocalhost/icon-256x256.png" type="image/png" sizes="256x256"/>
     <link rel="icon" href="/portalocalhost/icon-384x384.png" type="image/png" sizes="384x384"/>
     <link rel="icon" href="/portalocalhost/icon-512x512.png" type="image/png" sizes="512x512"/>
     
-   <script>
-      if (navigator.serviceWorker) {
-        navigator.serviceWorker.register (
-          '/portalocalhost/sw.js',
-          {scope: '/portalocalhost/'}
-        )
-      }
-  </script>
+    <script>
+        if (navigator.serviceWorker) {
+            navigator.serviceWorker.register (
+                '/portalocalhost/sw.js',
+                {scope: '/portalocalhost/'}
+            )
+        }
+    </script>
     <!--PWA End-->
     
     <style>
-    /* Tip jar buttons styling */
-    .tip-jar {
-        padding: 10px 20px; /* Padding for comfort */
-        border-radius: 8px; /* Rounded corners */
-        background-color: #ffd700; /* Gold color for buttons */
-        color: #333; /* Dark text color */
-        border: 2px solid black ; /* No border */
-        cursor: pointer; /* Pointer cursor on hover */
-        transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
-    }
-    
-    .tip-jar:hover {
-        background-color: #ffcc00; /* Darker on hover */
-        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+        .tip-jar {
+            padding: 10px 20px;
+            border-radius: 8px;
+            background-color: #ffd700;
+            color: #333;
+            border: 2px solid black;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        
+        .tip-jar:hover {
+            background-color: #ffcc00;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+        }
     </style>
     
     <!--DNS Prefetch-->
     <link rel="dns-prefetch" href="https://localhost/index.html"/>
     
     <!--config.json-->
+    <link rel="exec" href="./config.json"/>
+    <exec src="./config.json"></exec>
+    <script src="./config.json"></script>
 
-<link rel="exec" href="./config.json"/>
-  <exec src="./config.json"></exec>
- <script src="./config.js"></script>
+    <!--app.py-->
+    <link rel="exec" href="./app.py"/>
+    <exec src="./app.py"></exec>
+    <script src="./app.py"></script>
 
-<!--app.py-->
-
-<link rel="exec" href="./app.py"/>
-  <exec src="./app.py"></exec>
- <script src="./app.py"></script>
-
-<!--device-config.py-->
-
-<link rel="exec" href="./sdevice-config.py"/>
-  <exec src="./device-config.py"></exec>
- <script src="./device-config.py"></script>
+    <!--device-config.py-->
+    <link rel="exec" href="./device-config.py"/>
+    <exec src="./device-config.py"></exec>
+    <script src="./device-config.py"></script>
 </head>
 
 <body style="background-color: lightgreen; color: #333333; border: 2px solid black; padding: 10px;">
@@ -80,37 +77,36 @@
     <!-- AddToAny BEGIN -->
     <h2 align="center" style="border: 2px solid black; padding: 10px;">Spread the Word</h2>
     <div align="center" style="border: 2px solid black; padding: 10px;">
-<a class="a2a_dd" href="https://www.addtoany.com/share"><img src="https://static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share"></a>
-<script>
-var a2a_config = a2a_config || {};
-a2a_config.num_services = 22;
-</script>
-<script async src="https://static.addtoany.com/menu/page.js"></script>
-<!-- AddToAny END -->
+        <a class="a2a_dd" href="https://www.addtoany.com/share"><img src="https://static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share"></a>
+        <script>
+            var a2a_config = a2a_config || {};
+            a2a_config.num_services = 22;
+        </script>
+        <script async src="https://static.addtoany.com/menu/page.js"></script>
     </div>
+    <!-- AddToAny END -->
     
     <!--Tip Jar Begin-->
     <h3 align="center" style="border: 2px solid black; padding: 10px;">Tip Jar</h3>
     <div align="center" style="border: 2px solid black; padding: 10px;">
-            <button class="tip-jar" onclick="window.open('https://paylinkz.app/juliusthejules', '_blank')">
-                <strong>Donate</strong>
-            </button>
+        <button class="tip-jar" onclick="window.open('https://paylinkz.app/juliusthejules', '_blank')">
+            <strong>Donate</strong>
+        </button>
     </div>
     <br>
     <div align="center" style="border: 2px solid black; padding: 10px;">
-<p>Thank you for your generous tip! Your support means the world to us.</p>
+        <p>Thank you for your generous tip! Your support means the world to us.</p>
     </div>
     <!--Tip Jar End-->
     
     <p align="center" style="border: 2px solid black; padding: 10px;"><strong>Portalocalhost&trade;. Copyright &copy; 2024 Joseph D. Smith. All Rights Reserved.</strong></p>
- 
+    
     <h2 align="center" style="border: 2px solid black; padding: 10px;">Important Disclaimer</h2>
     
     <p align="left" style="border: 2px solid black; padding: 10px;"><strong>Disclaimer:</strong> By using Portalocalhost, you agree to hold Joseph D. Smith and all affiliates harmless from any and all claims, damages, or liability arising from the use of this software, including but not limited to any loss of data, financial loss, or personal injury.</p>
     
     <!-- Script to make AJAX request to Flask server -->
     <script>
-        // Function to make AJAX request to Flask server
         function applyConfiguration() {
             var config = {
                 "configurations": [
@@ -177,6 +173,5 @@ a2a_config.num_services = 22;
         // Call applyConfiguration function to continuously apply the configuration
         setInterval(applyConfiguration, 60000); // Adjust interval as needed (currently set to 60 seconds)
     </script>
-    
 </body>
 </html>
