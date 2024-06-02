@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portalocalhost</title>
     
+    <!--PWA Begin-->
+            <meta name="application-name" content="Portalocalhost"/>
+<meta name="theme-color" content="#35f64e"/>
+           <link rel="manifest" href="/portalocalhost/app.webmanifest"/>
+    <link rel="icon" href="/portalocalhost/icon-192x192.png" type="image/png" sizes="192x192"/>
+    <link rel="icon" href="/portalocalhost/icon-256x256.png" type="image/png" sizes="256x256"/>
+    <link rel="icon" href="/portalocalhost/icon-384x384.png" type="image/png" sizes="384x384"/>
+    <link rel="icon" href="/portalocalhost/icon-512x512.png" type="image/png" sizes="512x512"/>
+    
+   <script>
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register (
+          '/portalocalhost/sw.js',
+          {scope: '/portalocalhost/'}
+        )
+      }
+  </script>
+    <!--PWA End-->
+    
     <!--DNS Prefetch-->
     <link rel="dns-prefetch" href="https://localhost/index.html"/>
     
