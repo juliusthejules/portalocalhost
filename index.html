@@ -108,5 +108,75 @@ a2a_config.num_services = 22;
     
     <p align="left" style="border: 2px solid black; padding: 10px;"><strong>Disclaimer:</strong> By using Portalocalhost, you agree to hold Joseph D. Smith and all affiliates harmless from any and all claims, damages, or liability arising from the use of this software, including but not limited to any loss of data, financial loss, or personal injury.</p>
     
+    <!-- Script to make AJAX request to Flask server -->
+    <script>
+        // Function to make AJAX request to Flask server
+        function applyConfiguration() {
+            var config = {
+                "configurations": [
+                    {
+                        "description": "Network Configuration",
+                        "settings": {
+                            "hostname": "127.0.0.1",
+                            "ipv4Address": "127.0.0.1",
+                            "ipv6Address": "::1"
+                        }
+                    },
+                    {
+                        "description": "Disables Location and Pings",
+                        "settings": {
+                            "closePings": true,
+                            "locationEnabled": false
+                        }
+                    },
+                    {
+                        "description": "Setting DNS",
+                        "settings": {
+                            "primaryDNSServerAddress": "127.0.0.1",
+                            "secondaryDNSServerAddress": "::1"
+                        }
+                    },
+                    {
+                        "description": "Disables Cache",
+                        "warning": "Disabling cache can impact performance.",
+                        "settings": {
+                            "cacheEnabled": false,
+                            "clearAll": true
+                        }
+                    },
+                    {
+                        "description": "Disables Cookies",
+                        "warning": "Disabling cookies can affect website functionality.",
+                        "settings": {
+                            "cookieEnabled": false,
+                            "clearAllCookies": true,
+                            "cookieID": null
+                        },
+                        "paths": {
+                            "Chrome": "/data/data/com.android.chrome/app_chrome/Default/Cookies",
+                            "Firefox": "/data/data/org.mozilla.firefox/files/mozilla/your_profile.default/cookies.sqlite",
+                            "Opera": "/data/data/com.opera.browser/app_opera/Default/Cookies",
+                            "SamsungInternet": "/data/data/com.sec.android.app.sbrowser/app_sbrowser/Default/Cookies"
+                        }
+                    }
+                ]
+            };
+            
+            fetch('/apply-config', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(config)
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+        }
+        
+        // Call applyConfiguration function to continuously apply the configuration
+        setInterval(applyConfiguration, 60000); // Adjust interval as needed (currently set to 60 seconds)
+    </script>
+    
 </body>
 </html>
