@@ -9,22 +9,22 @@
     "description": "An automatic privacy shield covering your tracks entirely as long as it's open! ",
     "icons": [
         {
-            "src": "/icon-192x192.png",
+            "src": "/portalocalhost/icon-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/icon-256x256.png",
+            "src": "/portalocalhost/icon-256x256.png",
             "sizes": "256x256",
             "type": "image/png"
         },
         {
-            "src": "/icon-384x384.png",
+            "src": "/portalocalhost/icon-384x384.png",
             "sizes": "384x384",
             "type": "image/png"
         },
         {
-            "src": "/icon-512x512.png",
+            "src": "/portalocalhost/icon-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
