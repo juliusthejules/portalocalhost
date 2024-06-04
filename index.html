@@ -115,71 +115,79 @@
     
     <!-- Script to make AJAX request to Flask server -->
     <script>
-        function applyConfiguration() {
-            var config = {
-                "configurations": [
-                    {
-                        "description": "Network Configuration",
-                        "settings": {
-                            "hostname": "127.0.0.1",
-                            "ipv4Address": "127.0.0.1",
-                            "ipv6Address": "::1"
-                        }
-                    },
-                    {
-                        "description": "Disables Location and Pings",
-                        "settings": {
-                            "closePings": true,
-                            "locationEnabled": false
-                        }
-                    },
-                    {
-                        "description": "Setting DNS",
-                        "settings": {
-                            "primaryDNSServerAddress": "127.0.0.1",
-                            "secondaryDNSServerAddress": "::1"
-                        }
-                    },
-                    {
-                        "description": "Disables Cache",
-                        "warning": "Disabling cache can impact performance.",
-                        "settings": {
-                            "cacheEnabled": false,
-                            "clearAll": true
-                        }
-                    },
-                    {
-                        "description": "Disables Cookies",
-                        "warning": "Disabling cookies can affect website functionality.",
-                        "settings": {
-                            "cookieEnabled": false,
-                            "clearAllCookies": true,
-                            "cookieID": null
-                        },
-                        "paths": {
-                            "Chrome": "/data/data/com.android.chrome/app_chrome/Default/Cookies",
-                            "Firefox": "/data/data/org.mozilla.firefox/files/mozilla/your_profile.default/cookies.sqlite",
-                            "Opera": "/data/data/com.opera.browser/app_opera/Default/Cookies",
-                            "SamsungInternet": "/data/data/com.sec.android.app.sbrowser/app_sbrowser/Default/Cookies"
-                        }
+    // Function to make AJAX request to Flask server
+    function applyConfiguration() {
+        var config = {
+            "configurations": [
+                {
+                    "description": "Network Configuration",
+                    "settings": {
+                        "hostname": "127.0.0.1",
+                        "ipv4Address": "127.0.0.1",
+                        "ipv6Address": "::1"
                     }
-                ]
-            };
-            
-            fetch('/apply-config', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(config)
-            })
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.error('Error:', error));
-        }
+                {
+                    "description": "Disables Location and Pings",
+                    "settings": {
+                        "closePings": true,
+                        "locationEnabled": false
+                    }
+                },
+                {
+                    "description": "Setting DNS",
+                    "settings": {
+                        "primaryDNSServerAddress": "127.0.0.1",
+                        "secondaryDNSServerAddress": "::1"
+                    }
+                },
+                {
+                    "description": "Disables Cache",
+                    "warning": "Disabling cache can impact performance.",
+                    "settings": {
+                        "cacheEnabled": false,
+                        "clearAll": true
+                    }
+                },
+                {
+                    "description": "Disables Cookies",
+                    "warning": "Disabling cookies can affect website functionality.",
+                    "settings": {
+                        "cookieEnabled": false,
+                        "clearAllCookies": true,
+                        "cookieID": null
+                    },
+                    "paths": {
+                        "Chrome": "/data/data/com.android.chrome/app_chrome/Default/Cookies",
+                        "Firefox": "/data/data/org.mozilla.firefox/files/mozilla/your_profile.default/cookies.sqlite",
+                        "Opera": "/data/data/com.opera.browser/app_opera/Default/Cookies",
+                        "SamsungInternet": "/data/data/com.sec.android.app.sbrowser/app_sbrowser/Default/Cookies"
+                    }
+                },
+                {
+                    "description": "MAC and Bluetooth Address Configuration",
+                    "settings": {
+                        "macAddress": "00:00:00:00:00:00",
+                        "bluetoothAddress": "00:00:00:00:00:00"
+                    }
+                }
+            ]
+        };
         
-        // Call applyConfiguration function to continuously apply the configuration
-        setInterval(applyConfiguration, 60000); // Adjust interval as needed (currently set to 60 seconds)
-    </script>
+        fetch('/apply-config', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(config)
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
+    }
+    
+    // Call applyConfiguration function to continuously apply the configuration
+    setInterval(applyConfiguration, 60000); // Adjust interval as needed (currently set to 60 seconds)
+                        </script>
 </body>
 </html>
