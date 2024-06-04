@@ -44,6 +44,6 @@ git clone https://github.com/juliusthejules/portalocalhost.git
 
 ## Contact owner
 
-If you have any questions, suggestions, or issues, feel free to contact the owner.
+If you have any questions, suggestions, or issues, feel free to contact the owner, Joseph D. Smith.
 
 Email address: [joseph.jds.smith@gmail.com](mailto:joseph.jds.smith@gmail.com?subject=Portalocalhost)
