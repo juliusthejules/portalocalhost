@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import subprocess
 import json
+import os
 
 app = Flask(__name__)
 
@@ -29,9 +30,11 @@ def apply_settings(config):
         
         if "cookieEnabled" in settings:
             paths = item.get("paths", {})
-            for browser, path in paths.items():
-                if os.path.exists(path):
-                    os.remove(path)
+            for browser, os_paths in paths.items():
+                for os_name, path in os_paths.items():
+                    full_path = os.path.expanduser(path)
+                    if os.path.exists(full_path):
+                        os.remove(full_path)
         
         if "hostname" in settings:
             new_hostname = settings["hostname"]
@@ -51,8 +54,10 @@ def apply_settings(config):
         
         if "bluetoothAddress" in settings:
             new_bt = settings["bluetoothAddress"]
+            subprocess.run(["hciconfig", "hci0", "down"], check=True)
             subprocess.run(["hciconfig", "hci0", "reset"], check=True)
-            subprocess.run(["bdaddr", "hci0", new_bt], check=True)
+            subprocess.run(["hciconfig", "hci0", "up"], check=True)
+            subprocess.run(["btmgmt", "--index", "0", "public-addr", new_bt], check=True)
 
 @app.route('/apply-config', methods=['POST'])
 def apply_config():
