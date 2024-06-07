@@ -44,24 +44,27 @@
                 "Chrome": {
                     "Android": "/data/data/com.android.chrome/app_chrome/Default/Cookies",
                     "iOS": "~/Library/Application Support/Google/Chrome/Default/Cookies",
-                    "Windows": "C:\\Users\\<YourUserName>\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies"
+                    "Windows": "C:\\Users\\.\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies"
                 },
                 "Firefox": {
                     "Android": "/data/data/org.mozilla.firefox/files/mozilla/your_profile.default/cookies.sqlite",
                     "iOS": "~/Library/Application Support/Firefox/Profiles/your_profile.default/cookies.sqlite",
-                    "Windows": "C:\\Users\\<YourUserName>\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\your_profile.default\\cookies.sqlite"
+                    "Windows": "C:\\Users\\.\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\your_profile.default\\cookies.sqlite"
                 },
                 "Opera": {
                     "Android": "/data/data/com.opera.browser/app_opera/Default/Cookies",
                     "iOS": "~/Library/Application Support/com.operasoftware.Opera/Cookies",
-                    "Windows": "C:\\Users\\<YourUserName>\\AppData\\Roaming\\Opera Software\\Opera Stable\\Cookies"
+                    "Windows": "C:\\Users\\.\\AppData\\Roaming\\Opera Software\\Opera Stable\\Cookies"
                 },
                 "SamsungInternet": {
                     "Android": "/data/data/com.sec.android.app.sbrowser/app_sbrowser/Default/Cookies"
                 },
                 "Safari": {
                     "iOS": "~/Library/Cookies/Cookies.binarycookies",
-                    "Windows": "C:\\Users\\<YourUserName>\\AppData\\Roaming\\Apple Computer\\Safari\\Cookies\\Cookies.binarycookies"
+                    "Windows": "C:\\Users\\.\\AppData\\Roaming\\Apple Computer\\Safari\\Cookies\\Cookies.binarycookies"
+                },
+                "Edge": {
+                    "Windows": "C:\\Users\\.\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cookies"
                 }
             }
         }
